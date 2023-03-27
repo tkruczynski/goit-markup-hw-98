@@ -1,0 +1,50 @@
+.work {
+  padding-top: 0;
+
+  &__title {
+    text-align: center;
+    color: $main-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+  &__item {
+    flex-basis: calc((100% - 60px) / 3);
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: $grid-margin;
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.overlap {
+  position: absolute;
+  background-color: $dark-background-color;
+  width: 100%;
+  bottom: 0;
+  opacity: 0.8;
+  height: 70px;
+  margin-bottom: 0;
+
+  display: block;
+  padding: 0 auto;
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    color: $secondary-text-color;
+    padding-top: 27px;
+  }
+}

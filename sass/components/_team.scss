@@ -1,0 +1,77 @@
+.team {
+  background-color: $background-team-section;
+
+  &__title {
+    font-weight: $fontMedium;
+    color: $main-text-color;
+    font-size: 36px;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: $grid-margin;
+  }
+
+  &__item {
+    background-color: $background-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  &__info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  &__head {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color: $paragraf-text-color;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 16px;
+
+  &__item {
+    fill: $icon-color;
+  }
+  &__link {
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: none;
+    padding: 12px 12px;
+    border-radius: 50%;
+    display: block;
+    color: $icon-color;
+  }
+
+  &__icon {
+    display: block;
+  }
+  &__link:hover,
+  &__link:focus &__item:hover,
+  &__item:focus {
+    background-color: $active-color;
+    color: $secondary-text-color;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}

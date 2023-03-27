@@ -1,0 +1,82 @@
+.header {
+  &--border {
+    border-bottom: 1px solid $border-color;
+  }
+}
+.logo {
+  font-family: $secondary-font;
+  font-weight: $fontMedium;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+  &__span {
+    color: $active-color;
+  }
+}
+.nav {
+  margin-left: 93px;
+  margin-top: auto;
+
+  &__list {
+    display: flex;
+    font-weight: $fontSmall;
+    align-content: space-between;
+    gap: 46px;
+    color: $main-text-color;
+  }
+  &__link {
+    color: $main-text-color;
+    display: block;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus {
+    transform: scale(1.1);
+    color: $active-color;
+  }
+  &__underline:after {
+    content: "";
+    background-color: $active-color;
+    height: 4px;
+    display: block;
+    border-radius: 2px;
+  }
+  &__link--blue {
+    color: $active-color;
+    display: block;
+    padding-bottom: 28px;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+
+  &__link {
+    font-weight: $fontSmall;
+    color: $paragraf-text-color;
+    display: flex;
+    align-items: center;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $active-color;
+    transform: scale(1.05);
+  }
+}

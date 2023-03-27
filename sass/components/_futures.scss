@@ -1,0 +1,35 @@
+.futures {
+  &__view {
+    background-color: $background-team-section;
+    padding: 25px 100px;
+    border-radius: 4px;
+  }
+  &__title {
+    text-transform: uppercase;
+    color: $main-text-color;
+    font-weight: $fontMedium;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    margin-top: $grid-margin;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: $grid-margin;
+  }
+
+  &__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  &__text {
+    text-align: left;
+    color: $paragraf-text-color;
+    line-height: 1.71;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+  }
+}
