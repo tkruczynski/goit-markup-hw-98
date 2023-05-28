@@ -23,10 +23,21 @@
   </head>
   <body>
     <header class="header">
-      <div class="container container--align">
+      <div class="container header__wrapper">
         <a href="index.html" class="logo">
           <span class="logo__span">Web</span>Studio</a
         >
+
+        <button
+          class="header__menuOpen js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" class="header__menuIcon">
+            <use href="./images/icons/sprite.svg#icon-mobmenu"></use>
+          </svg>
+        </button>
+
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__underline">
@@ -65,7 +76,7 @@
     <main>
       <section class="hero space">
         <div class="container">
-          <h1 class="hero__title">efektywne rozwiązania Dla waszego biznesu</h1>
+          <h1 class="hero__title">efektywne rozwiązania dla waszego biznesu</h1>
 
           <button type="button" class="hero__button" data-modal-open>
             Zamów usługę
@@ -359,190 +370,231 @@
         </div>
       </section>
 
-      <section class="space">
-        <div class="container">
-          <div class="clients">
-            <h2 class="clients__head">Nasi klienci</h2>
-            <ul class="clients__list">
-              <li class="clients__item">
-                <a href="#" class="clients__link">
-                  <svg
-                    width="106"
-                    height="60"
-                    viewBox="0 0 100 50"
-                    class="clients__icon"
-                  >
-                    <use href="./images/icons/sprite.svg#icon-client1"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="clients__item">
-                <a href="#" class="clients__link">
-                  <svg
-                    width="106"
-                    height="60"
-                    viewBox="0 0 100 50"
-                    class="clients__icon"
-                  >
-                    <use href="./images/icons/sprite.svg#icon-client2"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="clients__item">
-                <a href="#" class="clients__link">
-                  <svg
-                    width="106"
-                    height="60"
-                    viewBox="0 0 100 50"
-                    class="clients__icon"
-                  >
-                    <use href="./images/icons/sprite.svg#icon-client3"></use>
-                  </svg>
-                </a>
-              </li>
+      <div class="container">
+        <div class="clients space">
+          <h2 class="clients__head">Nasi klienci</h2>
+          <ul class="clients__list">
+            <li class="clients__item">
+              <a href="#" class="clients__link">
+                <svg
+                  width="106"
+                  height="60"
+                  viewBox="0 0 100 50"
+                  class="clients__icon"
+                >
+                  <use href="./images/icons/sprite.svg#icon-client1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="#" class="clients__link">
+                <svg
+                  width="106"
+                  height="60"
+                  viewBox="0 0 100 50"
+                  class="clients__icon"
+                >
+                  <use href="./images/icons/sprite.svg#icon-client2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="#" class="clients__link">
+                <svg
+                  width="106"
+                  height="60"
+                  viewBox="0 0 100 50"
+                  class="clients__icon"
+                >
+                  <use href="./images/icons/sprite.svg#icon-client3"></use>
+                </svg>
+              </a>
+            </li>
 
-              <li class="clients__item">
-                <a href="#" class="clients__link">
-                  <svg
-                    width="106"
-                    height="60"
-                    viewBox="0 0 100 50"
-                    class="clients__icon"
-                  >
-                    <use href="./images/icons/sprite.svg#icon-client4"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="clients__item">
-                <a href="#" class="clients__link">
-                  <svg
-                    width="106"
-                    height="60"
-                    viewBox="0 0 100 50"
-                    class="clients__icon"
-                  >
-                    <use href="./images/icons/sprite.svg#icon-client5"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="clients__item">
-                <a href="#" class="clients__link">
-                  <svg
-                    width="106"
-                    height="60"
-                    viewBox="0 0 106 60"
-                    class="clients__icon"
-                  >
-                    <use href="./images/icons/sprite.svg#icon-client6"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+            <li class="clients__item">
+              <a href="#" class="clients__link">
+                <svg
+                  width="106"
+                  height="60"
+                  viewBox="0 0 100 50"
+                  class="clients__icon"
+                >
+                  <use href="./images/icons/sprite.svg#icon-client4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="#" class="clients__link">
+                <svg
+                  width="106"
+                  height="60"
+                  viewBox="0 0 100 50"
+                  class="clients__icon"
+                >
+                  <use href="./images/icons/sprite.svg#icon-client5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="#" class="clients__link">
+                <svg
+                  width="106"
+                  height="60"
+                  viewBox="0 0 106 60"
+                  class="clients__icon"
+                >
+                  <use href="./images/icons/sprite.svg#icon-client6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <div class="section">
-          <div class="address">
-            <ul class="logo">
-              <li class="logo__item">
-                <a href="index.html" class="footer__logo"
-                  ><span class="logo__span">Web</span
-                  ><span class="logo logo__span--white">Studio</span></a
+        <div class="address">
+          <ul class="logo">
+            <li class="logo__item">
+              <a href="index.html" class="footer__logo"
+                ><span class="logo__span">Web</span
+                ><span class="logo logo__span--white">Studio</span></a
+              >
+            </li>
+          </ul>
+
+          <address class="address">
+            <ul class="address__list">
+              <li class="address__item">
+                <a
+                  class="address__link"
+                  href="https://goo.gl/maps/n7dGZE4twgekGSiaA"
+                  >m. Warszawa, Aleje Jerozolimskie 21</a
+                >
+              </li>
+              <li class="address__item">
+                <a class="address__contact" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="address__item">
+                <a class="address__contact" href="tel:+48111111111"
+                  >+48 111 111 111</a
                 >
               </li>
             </ul>
+          </address>
+        </div>
 
-            <address>
-              <ul class="address__list">
-                <li class="address__item">
-                  <a
-                    class="address__link"
-                    href="https://goo.gl/maps/n7dGZE4twgekGSiaA"
-                    >m. Warszawa, Aleje Jerozolimskie 21</a
-                  >
-                </li>
-                <li class="address__item">
-                  <a class="address__contact" href="mailto:info@example.com"
-                    >info@example.com</a
-                  >
-                </li>
-                <li class="address__item">
-                  <a class="address__contact" href="tel:+48111111111"
-                    >+48 111 111 111</a
-                  >
-                </li>
-              </ul>
-            </address>
-          </div>
+        <!-- join section -->
 
-          <!-- join section -->
-
-          <div class="join">
-            <h3 class="join__head">dołącz do nas</h3>
-            <ul class="join__list">
-              <li class="join__item">
-                <a href="#">
-                  <svg width="20px" height="20px" class="join__icon">
-                    <use href="./images/icons/sprite.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="join__item">
-                <a href="#">
-                  <svg width="20px" height="20px" class="join__icon">
-                    <use href="./images/icons/sprite.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="join__item">
-                <a href="#">
-                  <svg width="20px" height="20px" class="join__icon">
-                    <use href="./images/icons/sprite.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="join__item">
-                <a href="#">
-                  <svg width="20px" height="20px" class="join__icon">
-                    <use href="./images/icons/sprite.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- signup section -->
-
-          <div class="signup">
-            <h3 class="join__head signup__head">Zapisz się do newslettera</h3>
-
-            <form class="signup__form">
-              <input
-                class="signup__input"
-                type="email"
-                name="signup-email"
-                placeholder="E-mail"
-              />
-              <button type="submit" class="signup__button">
-                Zapisz się
-                <svg width="24px" height="24px" class="signup__icon">
-                  <use href="./images/icons/sprite.svg#icon-sendform"></use>
+        <div class="join">
+          <h3 class="join__head">dołącz do nas</h3>
+          <ul class="join__list">
+            <li class="join__item">
+              <a href="#">
+                <svg width="20px" height="20px" class="join__icon">
+                  <use href="./images/icons/sprite.svg#icon-instagram"></use>
                 </svg>
-              </button>
-            </form>
-          </div>
+              </a>
+            </li>
+            <li class="join__item">
+              <a href="#">
+                <svg width="20px" height="20px" class="join__icon">
+                  <use href="./images/icons/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__item">
+              <a href="#">
+                <svg width="20px" height="20px" class="join__icon">
+                  <use href="./images/icons/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="join__item">
+              <a href="#">
+                <svg width="20px" height="20px" class="join__icon">
+                  <use href="./images/icons/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- signup section -->
+
+        <div class="signup">
+          <h3 class="join__head signup__head">Zapisz się do newslettera</h3>
+
+          <form class="signup__form">
+            <input
+              class="signup__input"
+              type="email"
+              name="signup-email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="signup__button">
+              Zapisz się
+              <svg width="24px" height="24px" class="signup__icon">
+                <use href="./images/icons/sprite.svg#icon-sendform"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
 
+    <!-- Mobile Menu -->
+    <div class="mobile js-mobile" id="mobile-menu">
+      <button type="button" class="mobile__closebtn" data-modal-close>
+        <svg class="" width="18px" height="18px">
+          <use href="./images/icons/sprite.svg#icon-menuclose"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile__navlist">
+        <li class="mobile__navitem"><a href="index.html">Agencja</a></li>
+        <li class="mobile__navitem"><a href="portfolio.html">Portfolio</a></li>
+        <li class="mobile__navitem"><a href="#">Kontakt</a></li>
+      </ul>
+
+      <ul class="mobile__contact">
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile__contactLink"
+            >info@devstudio.com</a
+          >
+        </li>
+        <li>
+          <a href="tel:+48111111111" class="mobile__contactLink"
+            >+48 111 111 111</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile__medialist">
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">Instagram</a>
+        </li>
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">Tweeter</a>
+        </li>
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">Facebook</a>
+        </li>
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
-          &#10006;
+          <svg class="xclose" width="30px" height="30px">
+            <use href="./images/icons/sprite.svg#icon-xclose"></use>
+          </svg>
         </button>
 
         <form class="modal__form" autocomplete="off">
@@ -625,6 +677,14 @@
         </form>
       </div>
     </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../js/mobile-menu.js"></script>
     <script src="../js/modal.js"></script>
   </body>
 </html>

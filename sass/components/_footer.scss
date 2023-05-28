@@ -1,155 +1,158 @@
 .footer {
   display: flex;
+  display: none;
   padding: 60px 0;
   background-color: $dark-background-color;
-  .section {
-    display: flex;
+}
+.section {
+  display: flex;
+  display: none;
 
-    .logo {
+  .logo {
+    display: none;
+    &__item {
+      display: flex;
+      font-family: Raleway;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.19;
+      letter-spacing: 0.03em;
+      color: $logo-text-color;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    &__span {
+      color: $active-color;
+    }
+
+    &__span--white {
+      color: $secondary-text-color;
+    }
+  }
+
+  .address {
+    &__list {
+      display: none;
+      margin-top: 20px;
+    }
+    &__item {
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__item:hover,
+    &__item:focus {
+      color: $active-color;
+      $footer-text-color: $active-color;
+      transform: scale(1.05);
+    }
+    &__link {
+      line-height: 1.46;
+      color: $secondary-text-color;
+      font-family: var(--main-font);
+      font-style: normal;
+      letter-spacing: 0.03em;
+    }
+    &__contact {
+      color: $footer-text-color;
+      line-height: 1.46;
+      letter-spacing: 0.03em;
+      font-family: $main-font;
+      font-style: normal;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  .join {
+    display: none;
+    margin-left: 70px;
+    margin-top: 30px;
+
+    &__head {
+      color: $secondary-text-color;
+      text-transform: uppercase;
+      font-size: 14px;
+      line-height: 1.14;
+      margin-bottom: 20px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    &__item {
+      border-radius: 50%;
+      background-color: $footer-icon-color;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 12px 12px;
+    }
+    &__icon {
+      fill: $secondary-text-color;
       display: block;
-
-      &__item {
-        font-family: Raleway;
-        font-weight: 700;
-        font-size: 26px;
-        line-height: 1.19;
-        letter-spacing: 0.03em;
-        color: $logo-text-color;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      &:hover,
-      &:focus {
-        transform: scale(1.05);
-      }
-
-      &__span {
-        color: $active-color;
-      }
-
-      &__span--white {
-        color: $secondary-text-color;
-      }
     }
 
-    .address {
-      display: block;
-
-      &__list {
-        margin-top: 20px;
-      }
-      &__item {
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      &__item:hover,
-      &__item:focus {
-        color: $active-color;
-        $footer-text-color: $active-color;
-        transform: scale(1.05);
-      }
-      &__link {
-        line-height: 1.46;
-        color: $secondary-text-color;
-        font-family: var(--main-font);
-        font-style: normal;
-        letter-spacing: 0.03em;
-      }
-      &__contact {
-        color: $footer-text-color;
-        line-height: 1.46;
-        letter-spacing: 0.03em;
-        font-family: $main-font;
-        font-style: normal;
-      }
-      &__item:not(:last-child) {
-        margin-bottom: 9px;
-      }
+    &__item:hover,
+    &__item:focus {
+      background-color: $active-color;
+      $icon-color: $secondary-text-color;
+      cursor: pointer;
+      transform: scale(1.05);
     }
+  }
 
-    .join {
-      margin-left: 70px;
-      margin-top: 30px;
+  .signup {
+    display: none;
+    margin-left: 70px;
+    margin-top: 30px;
+    position: relative;
 
-      &__head {
-        color: $secondary-text-color;
-        text-transform: uppercase;
-        font-size: 14px;
-        line-height: 1.14;
-        margin-bottom: 20px;
-      }
-      &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-      &__item {
-        border-radius: 50%;
-        background-color: $footer-icon-color;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 12px 12px;
-      }
-      &__icon {
-        fill: $secondary-text-color;
-        display: block;
-      }
-
-      &__item:hover,
-      &__item:focus {
-        background-color: $active-color;
-        $icon-color: $secondary-text-color;
-        cursor: pointer;
-        transform: scale(1.05);
-      }
+    &__input {
+      width: 330px;
+      height: 50px;
+      background-color: transparent;
+      border: solid 1px;
+      border-radius: 4px;
+      border-color: $form-window-border;
+      padding-left: 16px;
     }
-
-    .signup {
-      margin-left: 70px;
-      margin-top: 30px;
+    &__form {
+      display: flex;
+      align-items: center;
+    }
+    &__button {
+      height: 50px;
+      width: 200px;
+      background-color: $active-color;
+      color: $secondary-text-color;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.6;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+      border: none;
+      text-align: center;
+      align-items: baseline;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      margin-left: 12px;
+      padding-left: 28px;
+    }
+    &__button:hover,
+    &__button:focus {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+    &__icon {
+      fill: $secondary-text-color;
+      margin-left: 20px;
       position: relative;
-
-      &__input {
-        width: 330px;
-        height: 50px;
-        background-color: transparent;
-        border: solid 1px;
-        border-radius: 4px;
-        border-color: $form-window-border;
-        padding-left: 16px;
-      }
-      &__form {
-        display: flex;
-        align-items: center;
-      }
-      &__button {
-        height: 50px;
-        width: 200px;
-        background-color: $active-color;
-        color: $secondary-text-color;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.6;
-        letter-spacing: 0.06em;
-        border-radius: 4px;
-        border: none;
-        text-align: center;
-        align-items: baseline;
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        margin-left: 12px;
-        padding-left: 28px;
-      }
-      &__button:hover,
-      &__button:focus {
-        transform: scale(1.05);
-        cursor: pointer;
-      }
-      &__icon {
-        fill: $secondary-text-color;
-        margin-left: 20px;
-        position: relative;
-        top: 7px;
-      }
-      &__input:focus-within {
-        color: $secondary-text-color;
-      }
+      top: 7px;
+    }
+    &__input:focus-within {
+      color: $secondary-text-color;
     }
   }
 }

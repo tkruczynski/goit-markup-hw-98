@@ -1,7 +1,7 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./utils/reset";
 @import "./components/header";
-
 @import "./components/container";
 @import "./components/hero";
 @import "./components/futures";
@@ -12,3 +12,4 @@
 @import "./components/portfolio";
 @import "./components/clients";
 @import "./components/modal";
+@import "./components/mobile";

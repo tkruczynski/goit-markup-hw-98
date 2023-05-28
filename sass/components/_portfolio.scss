@@ -1,4 +1,5 @@
 .filters {
+  display: none;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -24,6 +25,7 @@
 }
 
 .portfolio {
+  display: none;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
