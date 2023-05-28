@@ -29,7 +29,7 @@
         >
 
         <button
-          class="header__menuOpen js-open-menu"
+          class="menu-toggle js-open-menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
@@ -547,8 +547,8 @@
     </footer>
 
     <!-- Mobile Menu -->
-    <div class="mobile js-mobile" id="mobile-menu">
-      <button type="button" class="mobile__closebtn" data-modal-close>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
         <svg class="" width="18px" height="18px">
           <use href="./images/icons/sprite.svg#icon-menuclose"></use>
         </svg>
@@ -685,6 +685,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="../js/mobile-menu.js"></script>
+
     <script src="../js/modal.js"></script>
   </body>
 </html>

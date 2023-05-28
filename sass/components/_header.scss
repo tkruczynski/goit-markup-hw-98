@@ -15,10 +15,10 @@
   &--border {
     border-bottom: 1px solid $border-color;
   }
-  &__menuOpen {
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
+  .menu-toggle {
+    // display: flex;
+    // justify-content: space-between;
+    // background-color: transparent;
     border: none;
     border-radius: 50%;
     min-height: 40px;
