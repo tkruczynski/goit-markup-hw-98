@@ -84,10 +84,13 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: $paragraf-text-color;
+
+    @include transition;
+    @include hover-active;
   }
   &__medialist {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     gap: 10px;
   }
   &__mediaitem {
@@ -99,17 +102,17 @@
 
     &::after:not(:last-child) {
       border-right: 1px solid;
-      border-color: $active-color;
     }
   }
   &__medialink {
     color: $super-blue;
     display: block;
     padding: 0;
+    border-color: $active-color;
   }
   &__stroke {
     height: 22px;
     margin-left: 10px;
-    color: $vertical-stroke-color;
+    color: $icon-color;
   }
 }

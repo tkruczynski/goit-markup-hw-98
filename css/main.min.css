@@ -1102,14 +1102,20 @@ svg {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile__email:hover {
+  color: #2196f3;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .mobile__medialist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 10px;
 }
 .mobile__mediaitem {
@@ -1123,15 +1129,15 @@ svg {
 }
 .mobile__mediaitem::after:not(:last-child) {
   border-right: 1px solid;
-  border-color: #2196f3;
 }
 .mobile__medialink {
   color: #2196f3;
   display: block;
   padding: 0;
+  border-color: #2196f3;
 }
 .mobile__stroke {
   height: 22px;
   margin-left: 10px;
-  color: #212121 20%;
+  color: #afb1b8;
 }/*# sourceMappingURL=main.min.css.map */
