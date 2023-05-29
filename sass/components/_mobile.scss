@@ -20,15 +20,19 @@
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-
   border: none;
   border-radius: 50%;
-
   cursor: pointer;
   outline: none;
   margin: 0;
   padding: 0;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transition;
+  @include hover-active;
+  // &:hover {
+  //   color: $active-color;
+  //   transform: scale(1.05);
+  // }
 }
 
 .mobile {
@@ -49,14 +53,20 @@
   }
   &__navlink {
     color: $main-text-color;
+    @include transition;
 
-    &:hover {
-      color: $active-color;
-    }
+    @include hover-active;
+  }
+  &__contact {
+    margin-top: auto;
+    margin-bottom: 64px;
   }
 
   &__clist:not(:last-child) {
     margin-bottom: 32px;
+    @include transition;
+
+    @include hover-active;
   }
 
   &__phone {
@@ -65,6 +75,7 @@
     letter-spacing: 0.02em;
     line-height: 1.17;
     color: $super-blue;
+
     margin-bottom: 32px;
   }
   &__email {
@@ -76,10 +87,11 @@
   }
   &__medialist {
     display: flex;
+    justify-content: center;
     gap: 10px;
-    margin-bottom: 0;
   }
   &__mediaitem {
+    display: flex;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.17;
@@ -94,5 +106,10 @@
     color: $super-blue;
     display: block;
     padding: 0;
+  }
+  &__stroke {
+    height: 22px;
+    margin-left: 10px;
+    color: $vertical-stroke-color;
   }
 }

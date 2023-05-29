@@ -1030,6 +1030,12 @@ svg {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-toggle:hover {
+  color: #2196f3;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .mobile {
@@ -1056,12 +1062,31 @@ svg {
 }
 .mobile__navlink {
   color: #212121;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile__navlink:hover {
   color: #2196f3;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.mobile__contact {
+  margin-top: auto;
+  margin-bottom: 64px;
 }
 .mobile__clist:not(:last-child) {
   margin-bottom: 32px;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile__clist:not(:last-child):hover {
+  color: #2196f3;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .mobile__phone {
   font-size: 34px;
@@ -1082,10 +1107,15 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
-  margin-bottom: 0;
 }
 .mobile__mediaitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.17;
@@ -1099,4 +1129,9 @@ svg {
   color: #2196f3;
   display: block;
   padding: 0;
+}
+.mobile__stroke {
+  height: 22px;
+  margin-left: 10px;
+  color: #212121 20%;
 }/*# sourceMappingURL=main.min.css.map */
