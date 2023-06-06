@@ -22,10 +22,11 @@
     <title>Efektywne rozwiązania dla Waszego biznesu</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--border">
       <div class="container header__wrapper">
         <a href="index.html" class="logo">
-          <span class="logo__span">Web</span>Studio</a
+          <span class="logo__span">Web</span
+          ><span class="logo__span--black">Studio</span></a
         >
 
         <button
@@ -40,13 +41,13 @@
 
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__underline">
+            <li class="nav__item">
               <a class="nav__link nav__link--blue" href="index.html">Agencja</a>
             </li>
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="portfolio.html">Portfolio</a>
             </li>
-            <li>
+            <li class="nav__item">
               <a class="nav__link" href="#">Kontakt</a>
             </li>
           </ul>
@@ -455,16 +456,12 @@
     <footer class="footer">
       <div class="container">
         <div class="address">
-          <ul class="logo">
-            <li class="logo__item">
-              <a href="index.html" class="footer__logo"
-                ><span class="logo__span">Web</span
-                ><span class="logo logo__span--white">Studio</span></a
-              >
-            </li>
-          </ul>
+          <a href="index.html" class="logo"
+            ><span class="logo__span">Web</span
+            ><span class="logo logo__span--white">Studio</span></a
+          >
 
-          <address class="address">
+          <address>
             <ul class="address__list">
               <li class="address__item">
                 <a
@@ -526,7 +523,7 @@
         <!-- signup section -->
 
         <div class="signup">
-          <h3 class="join__head signup__head">Zapisz się do newslettera</h3>
+          <h3 class="signup__head">Zapisz się do newslettera</h3>
 
           <form class="signup__form">
             <input

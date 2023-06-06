@@ -1,121 +1,119 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-height: 60px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // max-height: 60px;
+
+  &--border {
+    border-bottom: 1px solid $border-color;
+  }
 
   &__wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 60px;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding: 10px 0;
+    }
+    @include desktop {
+      align-items: center;
+      padding: 25px 0 25px;
+    }
   }
 
   // display: none;
-  &--border {
-    border-bottom: 1px solid $border-color;
-  }
-  .menu-toggle {
-    // display: flex;
-    // justify-content: space-between;
-    // background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    min-height: 40px;
-    min-width: 40px;
-    cursor: pointer;
-    outline: none;
-    margin: 0;
-    padding: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo {
+  @include logo;
+  @include transition;
+  @include hover-scale;
 
-    &:hover,
-    &:focus {
-      transform: scale(1.05);
-      fill: $active-color;
-    }
-    @include tablet {
-      display: none;
-    }
+  &__span {
+    color: $active-color;
   }
 
-  .logo {
-    font-family: $secondary-font;
-    font-weight: $fontMedium;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+  &__span--black {
     color: $main-text-color;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin-right: auto;
+  }
+}
 
+.nav {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    margin-left: 83px;
+  }
+
+  &__list {
+    display: flex;
+    font-weight: $fontSmall;
+    align-content: space-between;
+    gap: 46px;
+    // color: $main-text-color;
+
+    @include desktop {
+      display: flex;
+      margin-left: 93px;
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__link {
+    color: $main-text-color;
+    display: block;
+  }
+  &__link--blue {
+    color: $super-blue;
+  }
+
+  &__underline {
+    color: $super-blue;
+
+    @include transition;
+
+    @include hover-active;
+  }
+}
+
+.contact {
+  display: none;
+  gap: 50px;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: auto;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+  &__icon {
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__link {
+    font-weight: $fontSmall;
+    color: $paragraf-text-color;
+    display: flex;
+    align-items: center;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
     &:focus {
-      transform: scale(1.05);
-    }
-
-    &__span {
-      color: $active-color;
-    }
-  }
-  .nav {
-    display: none;
-    margin-left: 93px;
-    margin-top: auto;
-
-    &__list {
-      display: flex;
-      font-weight: $fontSmall;
-      align-content: space-between;
-      gap: 46px;
-      color: $main-text-color;
-    }
-    &__link {
-      color: $main-text-color;
-      display: block;
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &__link:hover,
-    &__link:focus {
-      transform: scale(1.1);
-      color: $active-color;
-    }
-    &__underline::after {
-      content: "";
-      color: $active-color;
-      height: 4px;
-      display: block;
-      border-radius: 2px;
-    }
-    &__link--blue {
-      color: $active-color;
-      display: block;
-      padding-bottom: 28px;
-    }
-  }
-
-  .contact {
-    display: flex;
-    display: none;
-    gap: 50px;
-    // margin-left: auto;
-
-    &__link {
-      font-weight: $fontSmall;
-      color: $paragraf-text-color;
-      display: flex;
-      align-items: center;
-      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    &__icon {
-      display: block;
-      margin-right: 10px;
-      fill: currentColor;
-    }
-
-    &__link:hover,
-    &__link:focus {
       color: $active-color;
       transform: scale(1.05);
     }

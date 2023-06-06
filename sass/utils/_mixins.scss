@@ -15,11 +15,26 @@
   }
 }
 @mixin hover-active {
-  &:hover {
+  &:hover,
+  &:focus {
     color: $active-color;
+    transform: scale(1.05);
+  }
+}
+@mixin hover-scale {
+  &:hover,
+  &:focus {
     transform: scale(1.05);
   }
 }
 @mixin transition {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@mixin logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $logo-text-color;
 }
