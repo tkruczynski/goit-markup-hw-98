@@ -1,9 +1,16 @@
 .futures {
-  display: none;
   &__view {
     background-color: $background-team-section;
-    padding: 25px 100px;
+    padding: 25px 190px;
     border-radius: 4px;
+
+    @include tablet {
+      padding: 25px 143px;
+    }
+
+    @include desktop {
+      padding: 25px 100px;
+    }
   }
   &__title {
     text-transform: uppercase;
@@ -14,16 +21,31 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     margin-top: $grid-margin;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+    }
   }
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: $grid-margin;
+
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 90px) / 4);
+    height: auto;
   }
 
   &__text {
@@ -32,5 +54,6 @@
     line-height: 1.71;
     font-size: 14px;
     letter-spacing: 0.03em;
+    align-items: center;
   }
 }

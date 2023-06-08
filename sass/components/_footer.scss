@@ -1,14 +1,20 @@
 .footer {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 60px 0;
   background-color: $dark-background-color;
 
   .logo {
-    // display: none;
-
     @include logo;
     @include transition;
     @include hover-scale;
+
+    &--footer {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+    }
 
     &__span {
       color: $active-color;
@@ -20,9 +26,10 @@
   }
 
   .address {
-    display: none;
     &__list {
-      // display: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-top: 20px;
     }
     &__item {
@@ -54,21 +61,24 @@
   }
 
   .join {
-    display: none;
-    margin-left: 70px;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-left: 70px;
+    // margin-top: 30px;
+    margin: 60px 0;
 
     &__head {
       color: $secondary-text-color;
       text-transform: uppercase;
       font-size: 14px;
       line-height: 1.14;
-      margin-bottom: 20px;
     }
     &__list {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 20px;
     }
     &__item {
       border-radius: 50%;
@@ -91,12 +101,13 @@
   }
 
   .signup {
-    display: none;
-    margin-left: 70px;
+    // margin-left: 70px;
     margin-top: 30px;
     position: relative;
 
     &__head {
+      display: flex;
+      justify-content: center;
       color: $secondary-text-color;
       text-transform: uppercase;
       font-size: 14px;
@@ -115,6 +126,7 @@
     }
     &__form {
       display: flex;
+      flex-direction: column;
       align-items: center;
     }
     &__button {
@@ -131,7 +143,7 @@
       text-align: center;
       align-items: baseline;
       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      margin-left: 12px;
+      margin-top: 20px;
       padding-left: 28px;
     }
     &__button:hover,

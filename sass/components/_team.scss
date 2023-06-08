@@ -1,5 +1,4 @@
 .team {
-  display: none;
   background-color: $background-team-section;
 
   &__title {
@@ -13,8 +12,19 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     gap: $grid-margin;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   &__item {
@@ -24,9 +34,16 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
   }
 
+  &__image {
+    display: block;
+
+    @include desktop {
+      width: 270px;
+    }
+  }
+
   &__info {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 0;
     text-align: center;
   }
 
@@ -43,36 +60,37 @@
     letter-spacing: 0.03em;
     color: $paragraf-text-color;
   }
-}
 
-.social {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 16px;
+  .social {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 16px;
 
-  &__item {
-    fill: $icon-color;
-  }
-  &__link {
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: none;
-    padding: 12px 12px;
-    border-radius: 50%;
-    display: block;
-    color: $icon-color;
-  }
+    &__item {
+      fill: $icon-color;
+    }
+    &__link {
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: none;
+      padding: 12px 12px;
+      border-radius: 50%;
+      display: block;
+      color: $icon-color;
+    }
 
-  &__icon {
-    display: block;
-  }
-  &__link:hover,
-  &__link:focus &__item:hover,
-  &__item:focus {
-    background-color: $active-color;
-    color: $secondary-text-color;
-    cursor: pointer;
-    transform: scale(1.05);
+    &__icon {
+      display: block;
+    }
+
+    &__link:hover,
+    &__link:focus &__item:hover,
+    &__item:focus {
+      background-color: $active-color;
+      color: $secondary-text-color;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
   }
 }

@@ -73,14 +73,25 @@
   }
   &__link--blue {
     color: $super-blue;
-  }
 
-  &__underline {
-    color: $super-blue;
+    &__underline {
+      color: $super-blue;
+      position: relative;
 
-    @include transition;
+      @include transition;
 
-    @include hover-active;
+      @include hover-active;
+    }
+    &__underline::after {
+      content: "";
+      display: block;
+      width: 100%;
+      color: $super-blue;
+      height: 4px;
+      position: absolute;
+      border-radius: 4px;
+      bottom: 0;
+    }
   }
 }
 
@@ -95,11 +106,13 @@
     gap: 10px;
     margin-left: auto;
   }
+
   @include desktop {
     display: flex;
     flex-direction: row;
     gap: 30px;
   }
+
   &__icon {
     display: block;
     margin-right: 10px;
@@ -112,10 +125,7 @@
     display: flex;
     align-items: center;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-      color: $active-color;
-      transform: scale(1.05);
-    }
+
+    @include hover-active;
   }
 }
