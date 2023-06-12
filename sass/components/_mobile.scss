@@ -33,6 +33,9 @@
   @include tablet {
     display: none;
   }
+  @include desktop {
+    display: none;
+  }
 }
 
 .mobile {

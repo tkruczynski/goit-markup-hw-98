@@ -1,8 +1,12 @@
 .futures {
   &__view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $background-team-section;
-    padding: 25px 190px;
+    // padding: 25px 190px;
     border-radius: 4px;
+    height: 120px;
 
     @include tablet {
       padding: 25px 143px;
@@ -10,8 +14,13 @@
 
     @include desktop {
       padding: 25px 100px;
+      text-align: center;
     }
   }
+  &__icon {
+    text-align: center;
+  }
+
   &__title {
     text-transform: uppercase;
     color: $main-text-color;
@@ -36,7 +45,9 @@
     gap: $grid-margin;
 
     @include tablet {
+      display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
     }
     @include desktop {
       display: flex;
@@ -45,7 +56,16 @@
   }
 
   &__item {
-    height: auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 270px;
+    }
   }
 
   &__text {
@@ -55,5 +75,12 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     align-items: center;
+
+    @include tablet {
+      width: 354px;
+    }
+    @include desktop {
+      width: 270px;
+    }
   }
 }
