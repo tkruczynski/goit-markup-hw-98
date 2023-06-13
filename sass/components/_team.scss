@@ -79,6 +79,7 @@
       border-radius: 50%;
       display: block;
       color: $icon-color;
+      @include transition;
     }
 
     &__icon {

@@ -1,9 +1,22 @@
 .filters {
-  display: none;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  margin-left: 0;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+  }
 
   &__button {
     background-color: $background-team-section;
@@ -25,10 +38,20 @@
 }
 
 .portfolio {
-  display: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-direction: column;
+  gap: $grid-margin;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
   &__image {
     display: block;
@@ -36,16 +59,19 @@
   &__card {
     position: relative;
     width: 100%;
-    height: calc(100% - 110px);
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
   }
   &__item {
-    flex-basis: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 30px) / 2);
     transition-property: box-shadow, cursor, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
+    @include desktop {
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
   &__item:hover {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
@@ -57,48 +83,48 @@
   &__item:hover .overlay {
     transform: translateX(0);
   }
+}
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $active-color;
-    opacity: 0.9;
-    transform: translatey(100%);
-    transition: transform 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $active-color;
+  opacity: 0.9;
+  transform: translatey(100%);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    &__text {
-      font-size: 18px;
-      line-height: 1.33;
-      letter-spacing: 0.03em;
-      text-align: left;
-      color: $secondary-text-color;
-      padding: 49px 45px 49px 24px;
-    }
+  &__text {
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: $secondary-text-color;
+    padding: 49px 24px;
   }
+}
 
-  .about {
-    border: solid 1px;
-    border-color: $border-color;
-    border-top: 0;
-    padding: 20px 24px;
+.about {
+  border: solid 1px;
+  border-color: $border-color;
+  border-top: 0;
+  padding: 20px 24px;
 
-    &__title {
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 2;
-      letter-spacing: 0.06em;
-      color: $main-text-color;
-      margin-bottom: 4px;
-    }
-    &__text {
-      font-size: 16px;
-      line-height: 1.88;
-      letter-spacing: 0.03em;
-      color: $paragraf-text-color;
-    }
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $main-text-color;
+    margin-bottom: 4px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $paragraf-text-color;
   }
 }

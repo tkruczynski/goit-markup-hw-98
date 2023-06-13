@@ -1,13 +1,23 @@
 .modal {
-  display: none;
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
+  max-width: 450px;
+  height: auto;
   background-color: $background-color;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 4px;
+
+  @include tablet {
+    width: 450px;
+    height: 609px;
+  }
+
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
 
   &__form {
     padding: 40px;
