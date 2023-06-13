@@ -10,4 +10,14 @@
   @include desktop {
     max-width: 1200px;
   }
+
+  &__footer {
+    display: flex;
+  }
+  @include tablet {
+    justify-content: space-around;
+  }
+  @include desktop {
+    flex-direction: row;
+  }
 }

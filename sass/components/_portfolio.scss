@@ -3,12 +3,13 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 40px;
-
+  width: 392px;
   margin-left: 0;
 
   @include tablet {
     display: flex;
     justify-content: center;
+    width: auto;
   }
 
   @include desktop {
@@ -16,6 +17,7 @@
     justify-content: center;
     gap: 8px;
     margin-bottom: 50px;
+    width: auto;
   }
 
   &__button {
