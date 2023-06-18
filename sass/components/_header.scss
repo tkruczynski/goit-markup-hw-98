@@ -1,9 +1,4 @@
 .header {
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-  // max-height: 60px;
-
   &--border {
     border-bottom: 1px solid $border-color;
   }
@@ -25,8 +20,6 @@
       height: 80px;
     }
   }
-
-  // display: none;
 }
 .logo {
   @include logo;
@@ -56,11 +49,13 @@
   }
 
   &__list {
-    display: flex;
     font-weight: $fontSmall;
     align-content: space-between;
     gap: 46px;
-    // color: $main-text-color;
+
+    @include tablet {
+      display: flex;
+    }
 
     @include desktop {
       display: flex;
@@ -68,38 +63,47 @@
     }
   }
 
-  &__item {
-    display: block;
-  }
-
-  &__link {
-    color: $main-text-color;
-    display: block;
-
-    @include transition;
-
-    @include hover-active;
-  }
-  &__link--blue {
-    color: $super-blue;
-
-    &__underline {
-      color: $super-blue;
-      position: relative;
+  @include tablet {
+    &__link {
+      color: $main-text-color;
+      display: block;
 
       @include transition;
 
       @include hover-active;
     }
-    &__underline::after {
-      content: "";
+    &__link--blue {
+      color: $active-color;
+    }
+    &__underline {
       display: block;
-      width: 100%;
-      color: $super-blue;
-      height: 4px;
-      position: absolute;
+      position: relative;
+      background-color: $active-color;
       border-radius: 4px;
-      bottom: 0;
+      height: 4px;
+      top: 30px;
+    }
+  }
+
+  @include desktop {
+    &__link {
+      color: $main-text-color;
+      display: block;
+
+      @include transition;
+
+      @include hover-active;
+    }
+    &__link--blue {
+      color: $active-color;
+    }
+    &__underline {
+      display: block;
+      position: relative;
+      background-color: $active-color;
+      border-radius: 4px;
+      height: 4px;
+      top: 30px;
     }
   }
 }
