@@ -29,6 +29,16 @@
           ><span class="logo__span">Web</span
           ><span class="logo__span--black">Studio</span></a
         >
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40" class="header__menuIcon">
+            <use href="./images/icons/sprite.svg#icon-mobmenu"></use>
+          </svg>
+        </button>
+
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -363,7 +373,7 @@
     </section>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__wrapper">
         <div class="address">
           <a class="logo logo--footer" href="index.html"
             ><span class="logo__span">Web</span
@@ -450,5 +460,60 @@
         </div>
       </div>
     </footer>
+    <div class="mobile menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg class="" width="18px" height="18px">
+          <use href="./images/icons/sprite.svg#icon-menuclose"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile__navlist">
+        <li class="mobile__navitem">
+          <a class="mobile__navlink" href="index.html">Agencja</a>
+        </li>
+        <li class="mobile__navitem">
+          <a class="mobile__navlink" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile__navitem">
+          <a class="mobile__navlink" href="#">Kontakt</a>
+        </li>
+      </ul>
+
+      <ul class="mobile__contact">
+        <li class="mobile__clist">
+          <a href="tel:+48111111111" class="mobile__phone">+48 111 111 111</a>
+        </li>
+        <li class="mobile__clist">
+          <a href="mailto:info@devstudio.com" class="mobile__email"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile__medialist">
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">Instagram</a>
+          <p class="mobile__stroke">|</p>
+        </li>
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">Tweeter</a>
+          <p class="mobile__stroke">|</p>
+        </li>
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">Facebook</a>
+          <p class="mobile__stroke">|</p>
+        </li>
+        <li class="mobile__mediaitem">
+          <a href="#" class="mobile__medialink">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -6,14 +6,17 @@
   background-color: $dark-background-color;
 
   @include tablet {
-    display: flex;
-    justify-content: space-around;
-
-    height: 463px;
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
-
   @include desktop {
-    flex-direction: row;
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
 
@@ -97,6 +100,15 @@
   align-items: center;
   margin: 60px 0;
 
+  @include tablet {
+    margin: 0;
+  }
+
+  @include desktop {
+    margin-left: 70px;
+    margin-top: 30px;
+  }
+
   &__head {
     color: $secondary-text-color;
     text-transform: uppercase;
@@ -127,27 +139,17 @@
     cursor: pointer;
     transform: scale(1.05);
   }
-
-  @include tablet {
-    top: 65px;
-    right: 89px;
-  }
-  @include desktop {
-    display: block;
-  }
 }
 
 .signup {
   margin-top: 30px;
 
-  @include tablet {
-    bottom: 60px;
-    left: 50%;
-    right: 50%;
-  }
   @include desktop {
-    display: block;
+    // display: block;
+
     margin-left: 70px;
+    margin-top: 30px;
+    position: relative;
   }
 
   &__head {
@@ -158,6 +160,10 @@
     font-size: 14px;
     line-height: 1.14;
     margin-bottom: 20px;
+
+    @include desktop {
+      justify-content: start;
+    }
   }
 
   &__input {
@@ -195,12 +201,18 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 20px;
     padding-left: 28px;
+
+    @include desktop {
+      margin-left: 12px;
+      margin-top: 0;
+    }
   }
   &__button:hover,
   &__button:focus {
     transform: scale(1.05);
     cursor: pointer;
   }
+
   &__icon {
     fill: $secondary-text-color;
     margin-left: 20px;

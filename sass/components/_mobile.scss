@@ -16,7 +16,7 @@
 .menu-toggle {
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 15px;
   border: none;
   background-color: transparent;
   display: flex;
@@ -46,7 +46,7 @@
     line-height: 1.17;
     font-weight: 500;
     letter-spacing: 0.02em;
-    display: flex;
+
     flex-direction: column;
     justify-content: space-between;
 
@@ -92,7 +92,7 @@
   }
   &__medialist {
     display: flex;
-    // justify-content: center;
+
     gap: 10px;
   }
   &__mediaitem {
@@ -107,6 +107,8 @@
     display: block;
     padding: 0;
     border-color: $active-color;
+    @include transition;
+    @include hover-scale;
   }
   &__stroke {
     height: 22px;

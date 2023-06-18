@@ -703,17 +703,23 @@ svg {
   background-color: #2f303a;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer {
+  .footer__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    height: 463px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer {
+  .footer__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -836,6 +842,17 @@ svg {
           align-items: center;
   margin: 60px 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .join {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+    margin-top: 30px;
+  }
+}
 .join__head {
   color: #ffffff;
   text-transform: uppercase;
@@ -870,32 +887,15 @@ svg {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .join {
-    top: 65px;
-    right: 89px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .join {
-    display: block;
-  }
-}
 
 .signup {
   margin-top: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .signup {
-    bottom: 60px;
-    left: 50%;
-    right: 50%;
-  }
-}
 @media screen and (min-width: 1200px) {
   .signup {
-    display: block;
     margin-left: 70px;
+    margin-top: 30px;
+    position: relative;
   }
 }
 .signup__head {
@@ -910,6 +910,13 @@ svg {
   font-size: 14px;
   line-height: 1.14;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .signup__head {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 .signup__input {
   width: 330px;
@@ -964,6 +971,12 @@ svg {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 20px;
   padding-left: 28px;
+}
+@media screen and (min-width: 1200px) {
+  .signup__button {
+    margin-left: 12px;
+    margin-top: 0;
+  }
 }
 .signup__button:hover, .signup__button:focus {
   -webkit-transform: scale(1.05);
@@ -1185,13 +1198,11 @@ svg {
   }
 }
 .clients__icon {
-  margin: 16px 32px;
+  margin: 13px 32px;
 }
 .clients__link {
   color: #afb1b8;
   display: block;
-  width: 210px;
-  height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1202,13 +1213,11 @@ svg {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients__link {
     width: 226px;
-    height: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__link {
     width: 170px;
-    height: 92px;
   }
 }
 .clients__link:hover, .clients__link:focus {
@@ -1487,7 +1496,7 @@ svg {
 .menu-toggle {
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 15px;
   border: none;
   background-color: transparent;
   display: -webkit-box;
@@ -1531,9 +1540,6 @@ svg {
   line-height: 1.17;
   font-weight: 500;
   letter-spacing: 0.02em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1613,6 +1619,14 @@ svg {
   display: block;
   padding: 0;
   border-color: #2196f3;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile__medialink:hover, .mobile__medialink:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .mobile__stroke {
   height: 22px;
