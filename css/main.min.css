@@ -40,6 +40,11 @@ img {
 body {
   font-family: "Roboto", "sans-serif";
 }
+@media screen and (min-width: 320px) {
+  body {
+    overflow-x: auto;
+  }
+}
 
 svg {
   fill: currentColor;
@@ -74,7 +79,6 @@ svg {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 25px 0 25px;
     height: 80px;
   }
 }
@@ -494,20 +498,6 @@ svg {
   }
 }
 
-.visually__hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .team {
   background-color: #f5f4fa;
 }
@@ -617,7 +607,6 @@ svg {
   border-radius: 50%;
   display: block;
   color: #afb1b8;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team .social__icon {
   display: block;
@@ -871,11 +860,11 @@ svg {
 .join__item {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 12px;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 12px 12px;
 }
 .join__icon {
   fill: #ffffff;
@@ -965,12 +954,12 @@ svg {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  margin-top: 20px;
+  padding-left: 28px;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 20px;
-  padding-left: 28px;
 }
 @media screen and (min-width: 1200px) {
   .signup__button {

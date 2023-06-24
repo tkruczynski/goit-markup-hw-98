@@ -16,7 +16,7 @@
     }
     @include desktop {
       align-items: center;
-      padding: 25px 0 25px;
+
       height: 80px;
     }
   }
@@ -138,8 +138,7 @@
     color: $paragraf-text-color;
     display: flex;
     align-items: center;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    @include transition;
     @include hover-active;
   }
 }

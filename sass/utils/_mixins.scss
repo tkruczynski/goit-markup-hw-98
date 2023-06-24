@@ -38,3 +38,8 @@
   letter-spacing: 0.03em;
   color: $logo-text-color;
 }
+@mixin min-width {
+  @media screen and (min-width: 320px) {
+    overflow-x: auto;
+  }
+}

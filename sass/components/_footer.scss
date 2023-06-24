@@ -67,7 +67,7 @@
   }
 
   &__item {
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @include transition;
   }
   &__item:hover,
   &__item:focus {
@@ -124,8 +124,8 @@
   &__item {
     border-radius: 50%;
     background-color: $footer-icon-color;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 12px 12px;
+    @include transition;
   }
   &__icon {
     fill: $secondary-text-color;
@@ -198,9 +198,9 @@
     border: none;
     text-align: center;
     align-items: baseline;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-top: 20px;
     padding-left: 28px;
+    @include transition;
 
     @include desktop {
       margin-left: 12px;
